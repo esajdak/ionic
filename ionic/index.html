@@ -23,7 +23,7 @@
         <div>
           <nav>
               <ul>
-                  <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Ionic"></a></li>
+                  <li class="logo"><a href="#" class="sprite sprite-logo" title="Ionic logo"></a></li>
                   <li><a href="#">Product</a></li>
                   <li><a href="#">Features</a></li>
                   <li><a href="#">Enterprise</a></li>
@@ -36,9 +36,9 @@
                 <h1>Your best work.</h1>
                 <h1 class="orangeText">Done Together.</h1>
                 <p class="info">Build better a business, faster. Start sharing your work
-                    <br />across your company-in realtime.</p>
-                <button class="orangeButton">TRY IT FREE</button>
-                <button class="blueButton">DOWNLOAD</button>
+                    <br />across your company&#8212;in realtime.</p>
+                <a href="#"><button class="orangeButton">TRY IT FREE</button></a>
+                <a href="#"><button class="blueButton">DOWNLOAD</button></a>
             </article>
             <article id="image">
                 <ul>
@@ -54,25 +54,25 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <article id="contentGrid">
-                    <img id="one" src="images/one.png" alt="Chat bubble">
+                    <i class="sprite sprite-one"></i>
                     <p id="firstP"><span>Communicate in realtime</span><br /><br />Lorem
                         ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. Ut enim ad minim veniam. </p>
 
-                    <img id="two" src="images/two.png" alt="Rocket ship">
+                    <i class="sprite sprite-two"></i>
                     <p id="secondP"><span>Do your best work</span><br /><br />Lorem
                         ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. Ut enim ad minim veniam. </p>
 
-                    <img id="three" src="images/three.png" alt="Clock">
+                    <i class="sprite sprite-three"></i>
                     <p id="thirdP"><span>Avoid costly revisions</span><br /><br />Lorem
                         ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. Ut enim ad minim veniam. </p>
 
-                    <img id="four" src="images/four.png" alt="Cloud">
+                    <i class="sprite sprite-four"></i>
                     <p id="fourthP"><span>Everything in one place</span><br /><br />Lorem
                         ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna
@@ -86,8 +86,8 @@
             </article>
 
             <article id="buttons">
-              <button class="orangeButton">TRY IT FREE</button>
-              <button class="blueButton">LEARN MORE</button>
+              <a href="#"><button class="orangeButton">TRY IT FREE</button></a>
+              <a href="#"><button class="blueButton">LEARN MORE</button></a>
             </article>
 
 
@@ -139,18 +139,23 @@
                     <p>Get the latest news, articles, and resources, sent to your inbox every week.</p>
                     <label for="email" class="hidden">Enter your email:</label>
                     <input type="email" id="email" name="email" placeholder="Email">
-                    <button class="orangeButton">SUBSCRIBE</button>
+                    <a href="#"><button class="orangeButton">SUBSCRIBE</button></a>
                 </section>
 
             </div>
 
             <hr>
 
-            <section>
-                &copy; 2020 Acme, Inc. All rights reserved.
-                <a href="facebook.com"><img src="images/facebook.png" alt="facebook icon"></a>
-                <a href="twitter.com"><img src="images/twitter.png" alt="twitter icon"></a>
-                <a href="instagram.com"><img src="images/instagram.png" alt="instagram icon"></a>
+            <section id="bottom">
+                <span id="copyright">
+                    &copy; 2020 Acme, Inc. All rights reserved.
+                </span>
+
+                <span id="icons">
+                    <a href="facebook.com" class="sprite sprite-facebook" title="facebook"></a>
+                    <a href="twitter.com" class="sprite sprite-twitter" title="twitter"></a>
+                    <a href="instagram.com" class="sprite sprite-instagram" title="instagram"></a>
+                </span>
             </section>
         </footer>
 

@@ -10,7 +10,7 @@ body {
 div {
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 4em 25em 35em 10em 20em;
+    grid-template-rows: 4em 25em 35em 10em 25em;
     grid-template-areas:
         "header header"
         "start image"
@@ -55,7 +55,11 @@ p.rightSideNav {
 
 a {
     text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+    font-style: italic;
 }
 
 nav a {
@@ -139,7 +143,7 @@ h2 {
 
 }
 
-#contentGrid img {
+#contentGrid i {
     align-self: center;
     margin: 0 0 2em 2em;
 
@@ -165,12 +169,16 @@ footer div {
 
 footer div section {
     text-align: left;
+    margin-bottom: 2em;
 }
 
 #subscribe {
     grid-area: subscribe;
     margin-left: auto;
     margin-right: 0;
+    max-width: 100%;
+    align-self: center;
+    border: black 1px solid;
 }
 
 footer a {
@@ -178,8 +186,15 @@ footer a {
 }
 
 footer ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 1em 0 0 0;
+    padding: 0;
     text-align: left;
+}
+
+footer ul li {
+    margin-bottom: 1em;
+    color: white;
 }
 
 #one {
@@ -232,6 +247,20 @@ input {
     padding: 1em;
 }
 
+#bottom {
+  margin-top: 1em;
+}
+
+#copyright {
+    float: left;
+}
+
+#icons {
+    float: right;
+}
+
+
+
 /* Buttons */
 
 .orangeButton {
@@ -239,9 +268,19 @@ input {
     background-color: #FD815A;
 }
 
+.orangeButton:hover, .orangeButton:active {
+    color: #FD815A;
+    background-color: #e6e6e6;
+}
+
 .blueButton {
     color: #4965CB;
     background-color: #E5ECFF;
+}
+
+.blueButton:hover, .blueButton:active {
+    color: #E5ECFF;
+    background-color: #4965CB;
 }
 
 button {
@@ -250,4 +289,60 @@ button {
     padding: 1em;
     border-radius: .5em;
     font-weight: bold;
+}
+
+/*Spritesheet*/
+
+.sprite {
+    background-image: url('../images/spritesheet.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-facebook {
+    width: 36px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite-four {
+    width: 44px;
+    height: 49px;
+    background-position: -51px -5px;
+}
+
+.sprite-instagram {
+    width: 35px;
+    height: 32px;
+    background-position: -105px -5px;
+}
+
+.sprite-logo {
+    width: 53px;
+    height: 42px;
+    background-position: -5px -64px;
+}
+
+.sprite-one {
+    width: 48px;
+    height: 48px;
+    background-position: -68px -64px;
+}
+
+.sprite-three {
+    width: 46px;
+    height: 47px;
+    background-position: -150px -5px;
+}
+
+.sprite-twitter {
+    width: 35px;
+    height: 32px;
+    background-position: -126px -62px;
+}
+
+.sprite-two {
+    width: 48px;
+    height: 46px;
+    background-position: -126px -104px;
 }
