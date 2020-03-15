@@ -143,6 +143,18 @@ h2 {
 
 }
 
+#features {
+    margin-top: 3em;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#features h2 {
+    font-size: 2em;
+    margin-top: 0em;
+}
+
 #contentGrid i {
     align-self: center;
     margin: 0 0 2em 2em;
@@ -161,7 +173,7 @@ footer {
 footer div {
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 15% 15% 15% 15% 30%;
+    grid-template-columns: 15% 15% 15% 15% auto;
     grid-template-rows: auto;
     grid-template-areas:
         "solutions resources company help subscribe";
@@ -174,11 +186,9 @@ footer div section {
 
 #subscribe {
     grid-area: subscribe;
-    margin-left: auto;
-    margin-right: 0;
-    max-width: 100%;
-    align-self: center;
-    border: black 1px solid;
+    max-width: 90%;
+    justify-content: end;
+
 }
 
 footer a {
@@ -242,7 +252,8 @@ p span {
 
 input {
     border: none;
-    height: 1.5em;
+    height: 10%;
+    width: 50%;
     border-radius: .5em;
     padding: 1em;
 }
