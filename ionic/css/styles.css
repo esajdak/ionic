@@ -4,11 +4,20 @@ body {
 
 div {
     display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 4em 25em 30em 6em 10em;
+    grid-template-areas:
+        "header header"
+        "start image"
+        "content content"
+        "ready buttons"
+        "footer footer";
+
 }
 
 /* Navigation */
 
-header nav ul {
+nav ul, #image ul {
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,9 +35,12 @@ header nav ul {
     max-width: 100%;
     align-items: center;
     margin-right: 2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
-
-header nav li {
+nav li, #image ul li {
     margin: 0 1em 0 1em;
 }
 
@@ -42,7 +54,7 @@ a {
 }
 
 a.whiteLink {
-    color: red;
+    color: white;
 }
 
 /* */
@@ -52,12 +64,103 @@ a.whiteLink {
     margin-top: -1em;
 }
 
+.info {
+    margin-top: -2em;
+}
+
 h1 {
     font-size: 4em;
 }
 
-#firstSection {
+h2 {
+    font-weight: 900;
+}
 
+#firstSection {
+    margin-left: 4em;
+    grid-area: start;
+    align-self: stretch;
+
+}
+
+#image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: blue;
+}
+
+#content {
+    grid-area: content;
+    align-self: stretch;
+    text-align: center;
+    background-color: white;
+
+}
+
+#contentGrid {
+
+    display: grid;
+    grid-template-columns: 9% 40% 9% 40%;
+    grid-template-rows: 49% 50%;
+    grid-template-areas:
+        "firstIcon firstP secondIcon secondP"
+        "thirdIcon thirdP fourthIcon fourthP";
+
+
+    margin: 1em 4em 0 4em;
+    grid-column-gap: 0;
+
+}
+
+#contentGrid img {
+    align-self: center;
+
+
+}
+
+#one {
+    grid-area: firstIcon;
+
+}
+
+#two {
+    grid-area: secondIcon;
+}
+
+#three {
+    grid-area: thirdIcon;
+}
+
+#four {
+    grid-area: fourthIcon;
+}
+
+#contentGrid p {
+    text-align: left;
+}
+
+#firstP {
+    grid-area: firstP;
+    
+}
+
+#secondP {
+    grid-area: secondP;
+}
+
+#thirdP {
+    grid-area: thirdP;
+}
+
+#fourthP {
+    grid-area: fourthP;
+}
+
+p span {
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 /* Buttons */
