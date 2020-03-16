@@ -1,6 +1,6 @@
 body {
     background-color: #F9FAFD;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .hidden {
@@ -9,8 +9,9 @@ body {
 
 div {
     display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 4em 25em 35em 10em 25em;
+    width: 100%;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 1fr 5fr 7fr 2fr 5fr;
     grid-template-areas:
         "header header"
         "start image"
@@ -40,10 +41,8 @@ nav ul, #image ul {
     max-width: 100%;
     align-items: center;
     margin-right: 2em;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 nav li, #image ul li {
     margin: 0 1em 0 1em;
@@ -74,35 +73,35 @@ a.whiteLink {
 
 .orangeText {
     color: #FD815A;
-    margin-top: -1em;
+    margin-top: 0;
 }
 
 .info {
-    margin-top: -2em;
+    font-size: 20px;
+    line-height: 160%;
 }
 
 h1 {
-    font-size: 3em;
+    font-size:  64px;
+    margin-bottom: 0;
 }
 
 h2 {
     font-weight: 900;
+    margin-bottom: 0;
 }
 
 #firstSection {
-    margin-left: 4em;
+    margin-left: 5%;
     grid-area: start;
-    align-self: stretch;
-    max-width: 100%;
-
 }
 
 #image {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: blue;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-image: url('../images/image.png');
+    background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #content {
@@ -117,7 +116,7 @@ h2 {
 #ready {
     grid-area: ready;
     max-width: 100%;
-    margin-left: 3em;
+    margin-left: 5%;
     margin-right: auto;
 
     align-self: center;
@@ -127,19 +126,20 @@ h2 {
     grid-area: buttons;
     align-self: center;
     margin-left: auto;
-    margin-right: 6em;
+    margin-right: 12%;
 }
 
 #contentGrid {
 
     display: grid;
-    grid-template-columns: 9% 40% 9% 40%;
-    grid-template-rows: 49% 50%;
+    grid-template-columns: 1fr 4fr 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "firstIcon firstP secondIcon secondP"
         "thirdIcon thirdP fourthIcon fourthP";
     margin: 1em 4em 0 4em;
-    grid-column-gap: 0;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
 
 }
 
@@ -173,7 +173,7 @@ footer {
 footer div {
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 15% 15% 15% 15% auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
     grid-template-rows: auto;
     grid-template-areas:
         "solutions resources company help subscribe";
@@ -186,7 +186,7 @@ footer div section {
 
 #subscribe {
     grid-area: subscribe;
-    max-width: 90%;
+
     justify-content: end;
 
 }
@@ -253,7 +253,7 @@ p span {
 input {
     border: none;
     height: 10%;
-    width: 50%;
+    width: 48%;
     border-radius: .5em;
     padding: 1em;
 }
@@ -356,4 +356,15 @@ button {
     width: 48px;
     height: 46px;
     background-position: -126px -104px;
+}
+
+@media screen and (max-width: 900px) {
+  input {
+      width: 30%;
+  }
+
+  #buttons {
+      margin-left: 0;
+      margin-right: 0;
+  }
 }
